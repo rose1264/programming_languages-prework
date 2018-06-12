@@ -43,6 +43,7 @@ def reformat_languages(languages)
         new_hash[language_name_key][:style] << oo_or_functional_key
         if new_hash[language_name_key][type_key].nil?
           new_hash[language_name_key][type_key] = type_value
+        end
       end
     end
   end

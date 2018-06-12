@@ -37,7 +37,7 @@ def reformat_languages(languages)
     programming_languages_hash_value.each do |language_name_key, type_hash_value|
       type_hash_value.each do |type_key, type_value|
         if new_hash[language_name_key].nil?
-          language_name_key = {}
+          new_hash[language_name_key] = {}
         end
         new_hash[language_name_key][:style] ||= []
         new_hash[language_name_key][:style] << oo_or_functional_key

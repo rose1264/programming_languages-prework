@@ -39,7 +39,7 @@ def reformat_languages(languages)
         if new_hash[language_name_key].nil?
           language_name_key = {}
         end
-        new_hash[language_name_key][:style] = []
+        new_hash[language_name_key][:style] ||= []
         new_hash[language_name_key][:style] << oo_or_functional_key
       end
     end

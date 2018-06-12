@@ -41,10 +41,12 @@ def reformat_languages(languages)
         end
         new_hash[language_name_key][:style] ||= []
         new_hash[language_name_key][:style] << oo_or_functional_key
+        if new_hash[language_name_key][type_key].nil?
+          new_hash[language_name_key][type_key] = type_value
       end
     end
   end
-  binding.pry
+  # binding.pry
   puts new_hash
 end
 
